@@ -1,0 +1,13 @@
+[Unit]
+Description=WPA supplicant
+After=rc-local.service
+IgnoreOnIsolate=true
+
+[Service]
+Type=dbus
+BusName=fi.w1.wpa_supplicant1
+ExecStart=/sbin/wpa_supplicant -Dwext -u -s -O /run/wpa_supplicant -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+
+[Install]
+WantedBy=multi-user.target
+Alias=dbus-fi.w1.wpa_supplicant1.service

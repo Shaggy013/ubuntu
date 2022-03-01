@@ -1,0 +1,2 @@
+ubuntu   ALL=(ALL:ALL) NOPASSWD: /usr/bin/putty
+ubuntu   ALL=(ALL:ALL) NOPASSWD: /usr/local/bin/scpl-factool
